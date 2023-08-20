@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Summary</title>
+</head>
+
+<body>
+    <h1>Fainal Dom even</h1>
+    <h3 id="handlar-status">Defold text</h3>
+    <p id="input-text-display">Defold input text</p>
+    <input id="input-fild" type="text">
+    <button id="btn-update">Update</button>
+    <br>
+    <br>
+    <button onclick="handleOnClink()">click me</button>
+    <button id="even-listener">Handlar even by addEvenlistener</button>
+
+    <script>
+
+        function handleOnClink() {
+            const handlarStatus = document.getElementById('handlar-status');
+            handlarStatus.innerText = 'Heandle by function'
+        }
+        // opption:2
+
+        document.getElementById('even-listener').addEventListener('click', function () {
+            const handlarStatusText = document.getElementById('handlar-status');
+            handlarStatusText.innerText = 'New function use this button'
+        })
+        // opption:2 recap
+        document.getElementById('btn-update').addEventListener('click', function () {
+            const inputFild = document.getElementById('input-fild');
+            const inputText = inputFild.value;
+            const p = document.getElementById('input-text-display');
+            p.innerText = inputText;
+            inputFild.value = '';
+        })
+    </script>
+
+</body>
+
+</html>
