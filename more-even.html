@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Event</title>
+</head>
+
+<body>
+    <h1>Explor more events </h1>
+    <button id="btn-more">Events</button>
+    <input id="text-fild" type="text">
+
+    <script>
+        document.getElementById('text-fild').addEventListener('focus', function () {
+            console.log('even target fucus')
+        })
+        document.getElementById('text-fild').addEventListener('blur', function () {
+            console.log('even target blower ')
+        })
+        document.getElementById('btn-more').addEventListener('mouseenter', function () {
+            console.log('even target');
+        })
+    </script>
+</body>
+
+</html>
